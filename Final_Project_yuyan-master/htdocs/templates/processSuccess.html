@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+<title>Delete Book Record</title>
+
+<style>
+#header {
+    background-color:black;
+    color:white;
+    text-align:center;
+    padding:5px;
+}
+#nav {
+    line-height:60px;
+    background-color:#eeeeee;
+    height:300px;
+    width:200px;
+    float:left;
+    padding:5px;	      
+}
+#section {
+    width:350px;
+    float:left;
+    padding:10px;	 	 
+}
+#footer {
+    background-color:black;
+    color:white;
+    clear:both;
+    text-align:center;
+   padding:5px;	 	 
+}
+</style>
+
+<body>
+<header>
+  <div class="container" id="header">
+	<h1>Delete Book Record</h1>
+  </div>
+</header>
+
+<main>
+<div id="nav">
+		<a href= "/index" >Add book</a><br>
+    <a href= "/delete" >Delete book</a><br>
+		<a href= "/studentRecords" >Book content</a>
+</div>
+  <div class="container"> 
+
+  <div class="container">
+	The following book has been deleted: <P>
+	<label>Book id: {{recordd.BookId}}
+  </div>
+</main>
+<div id="footer">
+Management System
+</div>
+<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+
+</body>
+</html>

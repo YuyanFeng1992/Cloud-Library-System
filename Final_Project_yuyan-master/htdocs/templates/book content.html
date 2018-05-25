@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+<title>Book content</title>
+
+<style>
+#header {
+    background-color:black;
+    color:white;
+    text-align:center;
+    padding:5px;
+}
+#nav {
+    line-height:60px;
+    background-color:#eeeeee;
+    height:300px;
+    width:200px;
+    float:left;
+    padding:5px;	      
+}
+#section {
+    width:350px;
+    float:left;
+    padding:10px;	 	 
+}
+#footer {
+    background-color:black;
+    color:white;
+    clear:both;
+    text-align:center;
+   padding:5px;	 	 
+}
+</style> 
+</head>
+
+<body>
+<header>
+  <div class="container" id="header">
+	<h1>Book content:</h1>
+  </div>
+</header>
+
+<main>
+<div id="nav">
+		<a href= "/index" >Add book</a><br>
+		<a href= "/delete" >Delete book</a><br>
+		<a href= "/studentRecords" >Book content</a>
+</div>
+  <div class="container"> 
+	<table>
+		<table >
+		<tr >
+			<th style="width:7%">Book id</th>
+			<th>Bookname</th>
+			<th>Category</th>
+			<th>Author</th>
+			<th>Publisher</th>
+			<th>Pubdate</th>
+			<th>Price buying</th>
+			<th>Price selling</th>
+		</tr>
+
+		
+		{% for record in records %}
+		<tr>
+			<td>{{record[0]}}</td>
+			<td>{{record[1]}}</td>
+			<td>{{record[2]}}</td>
+			<td>{{record[3]}}</td>
+			<td>{{record[4]}}</td>
+			<td>{{record[5]}}</td>
+			<td>{{record[6]}}</td>
+			<td>{{record[7]}}</td>
+		</tr>
+		<!-- students is a list of lists. So, use nested loop to process 
+			the lists and each element within each list -->
+		{% endfor %}
+
+			
+		<!-- *** I. You are to write the nested loop to process the 
+			the list of lists, and display them in a table format:
+			one row per list. Use the "<tr> ...  </tr>" tag pair to enclose a row,
+			and use a html tag pair of <td> ... </td>	to enclose each cell in a row.
+			Each cell should display an element within a list. Here is a reference
+			to learn loop syntax: http://jinja.pocoo.org/docs/2.9/templates/			
+		-->
+
+	</table>
+  </div>
+</main>
+
+<div id="footer">
+Management System
+</div>
+
+
+</body>
+</html>

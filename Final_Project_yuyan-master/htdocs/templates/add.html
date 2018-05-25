@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+<title>Add a Book</title>
+<style>
+#header {
+    background-color:black;
+    color:white;
+    text-align:center;
+    padding:5px;
+}
+#nav {
+    line-height:60px;
+    background-color:#eeeeee;
+    height:300px;
+    width:200px;
+    float:left;
+    padding:5px;	      
+}
+#section {
+    width:350px;
+    float:left;
+    padding:10px;	 	 
+}
+#footer {
+    background-color:black;
+    color:white;
+    clear:both;
+    text-align:center;
+   padding:5px;	 	 
+}
+</style>
+
+</head>
+
+<body>
+<header>
+  <div class="container" id="header">
+	<h1>Add a book</h1>
+  </div>
+</header>
+
+<main>
+<div id="nav">
+		<a href= "/index" >Add book</a><br>
+        <a href= "/delete" >Delete book</a><br>
+		<a href= "/studentRecords" >Book content</a>
+</div>
+  <div class="container"> 
+	<FORM value="form" action="{{url_for('processRecord')}}" method="post">
+
+    <LABEL for="BookName">Book name: </LABEL>
+    <INPUT type="text" name="BookName"><BR>
+        <LABEL for="Author">Author: </LABEL>
+    <INPUT type="text" name="Author"><BR>
+        <LABEL for="Publisher">Publisher: </LABEL>
+    <INPUT type="text" name="Publisher"><BR>
+        <LABEL for="Pubdate">Pubdate: </LABEL>
+    <INPUT type="text" name="Pubdate"><BR>
+        <LABEL for="Price">Price buying: </LABEL>
+    <INPUT type="text" name="Price"><BR>
+        <LABEL for="Sellingprice">Price selling: </LABEL>
+    <INPUT type="text" name="Sellingprice"><BR><BR><BR>
+    <LABEL for="BookCName">Confirm: </LABEL><BR><BR>
+    {% for course in courses %}   
+      <INPUT type="radio" name="BookCName" value="{{course}}">{{course}}&nbsp&nbsp&nbsp&nbsp  
+    {% endfor %}
+    <BR><br><INPUT type="submit" value="Save"> <INPUT type="reset">
+		
+	</FORM>
+  </div>
+</main>
+
+<div id="footer">
+Management System
+</div>
+
+<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<title>Save Book Record</title>
+
+<style>
+#header {
+    background-color:black;
+    color:white;
+    text-align:center;
+    padding:5px;
+}
+#nav {
+    line-height:60px;
+    background-color:#eeeeee;
+    height:300px;
+    width:200px;
+    float:left;
+    padding:5px;	      
+}
+#section {
+    width:350px;
+    float:left;
+    padding:10px;	 	 
+}
+#footer {
+    background-color:black;
+    color:white;
+    clear:both;
+    text-align:center;
+   padding:5px;	 	 
+}
+</style>
+
+<body>
+<header>
+  <div class="container" id="header">
+	<h1>Save Book Record</h1>
+  </div>
+</header>
+
+<main>
+<div id="nav">
+		<a href= "/index" >Add book</a><br>
+    <a href= "/delete" >Delete book</a><br>
+		<a href= "/studentRecords" >Book content</a>
+</div>
+  <div class="container"> 
+
+  <div class="container">
+	The book has been added: <P>
+	<label>Book name: {{record.BookName}}<!-- *** C. you are to display the first name here --><br>
+	<label>Author: {{record.Author}}<!-- *** D. you are to display the last name here --><br>
+	<label>Publisher: {{record.Publisher}}<!-- *** E. you are to display the email here --><br>
+	<label>Pubdate: {{record.Pubdate}}<!-- *** F. you are to display the coursenum here --><br>
+	<label>Price buying: {{record.Price}}<!-- *** F. you are to display the coursenum here --><br>
+	<label>Price selling: {{record.Sellingprice}}<!-- *** F. you are to display the coursenum here --><br>
+	<label>Category: {{record.BookCName}}<!-- *** F. you are to display the coursenum here --><br>
+  </div>
+</main>
+<div id="footer">
+Management System
+</div>
+<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+
+</body>
+</html>
